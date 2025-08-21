@@ -1,0 +1,1066 @@
+/* Importação da fonte Lato */
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700');
+
+/* Reset / base */
+* { box-sizing: border-box; }
+html, body { overflow-x: hidden; }
+
+/* Estilos Gerais */
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #181818 url('background.png') center center/cover no-repeat fixed;
+    color: #232323;
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+/* Elementos de fundo decorativos */
+.header-bg, .footer-bg, .hero-bg {
+    position: absolute;
+    left: 0; right: 0;
+    z-index: 0;
+}
+.header-bg {
+    top: 0;
+    height: 140px;
+    background: linear-gradient(90deg, #fffbe6 0%, #f8f9fa 100%);
+    border-bottom-left-radius: 60px 40px;
+    border-bottom-right-radius: 60px 40px;
+    opacity: 1;
+}
+.footer-bg {
+    bottom: 0;
+    height: 80px;
+    background: linear-gradient(90deg, #fffbe6 0%, #f8f9fa 100%);
+    border-top-left-radius: 60px 40px;
+    border-top-right-radius: 60px 40px;
+    opacity: 1;
+}
+.hero-bg {
+    top: 140px;
+    height: 120px;
+    background: radial-gradient(circle at 80% 20%, #fffbe6 0%, #f8f9fa 100%);
+    opacity: 0.3;
+}
+
+/* Cabeçalho */
+.site-header {
+    position: relative;
+    padding: 0 0 2px 0;
+    z-index: 1;
+    background: #ffffff;
+    border-bottom: 4px solid #FFD600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 0 2px 0;
+    gap: 2px;
+}
+.site-logo {
+    max-width: 220px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+}
+.site-logo.no-bg {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+}
+.main-title {
+    font-size: 1.3em;
+    color: #FFD600;
+    margin: 0 0 2px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.main-subtitle {
+    font-size: 0.98em;
+    color: #111;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    padding: 0; /* adicionaremos padding no mobile para não estourar */
+    position: relative;
+    z-index: 1;
+    background: #ffffffa4;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px 0 rgba(0,0,0,0.10);
+    margin: 80px auto;
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.main-titles {
+    padding: 20px 0 8px 0;
+    text-align: center;
+}
+.main-title {
+    font-size: 2em;
+    color: #FFD600;
+    margin: 0 0 2px 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.main-subtitle {
+    font-size: 1.08em;
+    color: #111;
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero-section {
+    margin: 0 0 8px 0;
+}
+.hero-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 0 16px 0;
+}
+.hero-message {
+    flex: 1 1 320px;
+    min-width: 260px;
+    max-width: 420px;
+}
+.hero-title {
+    color: #232323;
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-align: left;
+}
+.hero-desc {
+    color: #444;
+    font-size: 1em;
+    margin-bottom: 0;
+    line-height: 1.6;
+    text-align: left;
+}
+.hero-video {
+    flex: 1 1 320px;
+    min-width: 260px;
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 420px;
+    width: 100%;
+    background: #181818;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+}
+.video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    border: 0;
+}
+
+/* Sobre */
+.about-section {
+    background: transparent; /* Transparente: pseudo-elemento fará o overlay */
+    padding: 0;
+    border-radius: 0 0 18px 18px;
+    box-shadow: none;
+    margin: 0;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    overflow: hidden; /* evita bordas brancas */
+}
+.about-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #232323ad; /* transparência original */
+    z-index: -1;
+}
+.about-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+.about-text {
+    flex: 1 1 320px;
+    min-width: 260px;
+    max-width: 420px;
+    text-align: left;
+}
+.about-image {
+    flex: 1 1 320px;
+    min-width: 260px;
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+}
+.about-image img {
+    width: 480px;
+    height: 270px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+    object-fit: cover;
+    display: block;
+}
+.section-subtitle {
+    color: #FFD600;
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.about-section p {
+    font-size: 0.98em;
+    color: #e0e0e0;
+    margin-bottom: 12px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.highlight-box {
+    background: #FFD600;
+    color: #232323;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 0.95em;
+    font-weight: 600;
+    margin: 16px auto 16px auto;
+    box-shadow: 0 2px 6px 0 rgba(0,0,0,0.06);
+    text-align: center;
+    max-width: 480px;
+    width: 100%;
+}
+
+.cta-btn {
+    margin-top: 10px;
+    background: #232323;
+    color: #FFD600;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 28px;
+    font-size: 1.08em;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    letter-spacing: 0.5px;
+}
+.cta-btn:hover {
+    background: #FFD600;
+    color: #232323;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.13);
+    border: 1px solid #232323;
+}
+
+.about-image {
+    margin: 32px auto 0 auto;
+    text-align: center;
+    max-width: 700px;
+}
+.about-image img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+    object-fit: cover;
+}
+
+
+/* Rodapé */
+.site-footer {
+    position: relative;
+    padding: 2px 0 2px 0;
+    z-index: 1;
+    min-height: 32px;
+    background: #ffffff;
+    color: #232323;
+    margin-top: 80px;
+    border-top: 4px solid #FFD600;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
+.footer-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+.footer-message {
+    color: #232323;
+    font-size: 0.98em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    background: transparent;
+    padding: 6px 12px;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+/* Ajuste: botão menor padrão */
+.button-container-1 {
+    width: 240px !important;
+    height: 52px !important;
+    border-width: 2px !important;
+}
+.button-container-1 button, .button-container-1 .mas, .button-container-1 .mas-hover {
+    font-size: 15px !important;
+}
+
+@media (max-width: 900px) {
+    .button-container-1 { width: 220px !important; height: 48px !important; }
+    .button-container-1 button, .button-container-1 .mas, .button-container-1 .mas-hover { font-size: 14px !important; }
+}
+@media (max-width: 600px) {
+    .button-container-1 { width: 200px !important; height: 44px !important; }
+    .button-container-1 button, .button-container-1 .mas, .button-container-1 .mas-hover { font-size: 13px !important; }
+}
+@media (max-width: 420px) {
+    .button-container-1 { width: 190px !important; height: 42px !important; }
+    .button-container-1 button, .button-container-1 .mas, .button-container-1 .mas-hover { font-size: 12.5px !important; }
+}
+
+/* Responsivo - Mobile Otimizado (NÃO AFETA DESKTOP) */
+
+/* Tablets e telas médias */
+@media screen and (max-width: 1024px) {
+    .container {
+        max-width: 900px;
+        padding: 20px 16px;
+    }
+    
+    .main-content {
+        width: 98%;
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+}
+
+/* Tablets pequenos */
+@media screen and (max-width: 900px) {
+    .hero-flex {
+        flex-direction: column !important;
+        gap: 8px !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 0 8px 8px 8px !important;
+    }
+    
+    .hero-message {
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 4px !important;
+    }
+    
+    .hero-title {
+        text-align: center !important;
+        font-size: 1.3em !important;
+        margin-bottom: 6px !important;
+    }
+    
+    .hero-desc {
+        text-align: center !important;
+        max-width: 600px !important;
+        margin: 0 auto 4px auto !important;
+    }
+    
+    .hero-video {
+        max-width: 100% !important;
+        width: 100% !important;
+        margin-top: 0 !important;
+    }
+    
+    .about-flex {
+        gap: 8px !important;
+        padding: 16px 12px !important;
+    }
+    
+    .about-content {
+        flex-direction: column !important;
+        gap: 6px !important;
+        width: 100% !important;
+    }
+    
+    .about-text {
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 2px !important;
+    }
+    
+    .about-image {
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+    
+    .highlight-box {
+        margin: 8px auto !important;
+        max-width: 90% !important;
+    }
+    
+    .button-container-1 {
+        margin: 8px auto 0 auto !important;
+    }
+    
+    .site-logo {
+        max-width: 240px;
+    }
+}
+
+/* Smartphones grandes */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 8px 6px;
+    }
+    
+    .main-content {
+        width: 100%;
+        margin: 16px auto;
+        border-radius: 12px;
+        padding: 0;
+    }
+    
+    .main-titles {
+        padding: 12px 8px 4px 8px;
+        text-align: center;
+    }
+    
+    .main-title {
+        font-size: 1.5em;
+        margin-bottom: 4px;
+    }
+    
+    .main-subtitle {
+        font-size: 0.95em;
+        margin-bottom: 4px;
+    }
+    
+    .hero-section {
+        margin: 0 0 8px 0;
+    }
+    
+    .hero-flex {
+        padding: 0 8px 8px 8px !important;
+        gap: 6px !important;
+    }
+    
+    .hero-message {
+        margin-bottom: 2px;
+    }
+    
+    .hero-title {
+        font-size: 1.1em;
+        margin-bottom: 4px;
+    }
+    
+    .hero-desc {
+        font-size: 0.9em;
+        line-height: 1.4;
+        max-width: 100%;
+        margin-bottom: 2px;
+    }
+    
+    .hero-video {
+        margin-top: 0;
+    }
+    
+    .video-container {
+        max-width: 100%;
+        border-radius: 8px;
+        margin: 0 auto;
+    }
+    
+    .video-container iframe {
+        border-radius: 8px;
+    }
+    
+    .about-flex {
+        padding: 12px 8px !important;
+        gap: 6px !important;
+    }
+    
+    .about-content {
+        gap: 4px !important;
+    }
+    
+    .about-text {
+        padding: 0 2px;
+        margin-bottom: 2px;
+    }
+    
+    .section-subtitle {
+        font-size: 1.2em;
+        margin-bottom: 6px;
+        text-align: center;
+    }
+    
+    .about-section p {
+        font-size: 0.9em;
+        line-height: 1.4;
+        margin-bottom: 6px;
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .about-image {
+        margin-top: 2px;
+    }
+    
+    .about-image img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    
+    .highlight-box {
+        margin: 6px auto;
+        padding: 10px 12px;
+        font-size: 0.85em;
+        max-width: 98%;
+        border-radius: 8px;
+    }
+    
+    .button-container-1 {
+        width: 220px;
+        height: 45px;
+        margin-top: 6px;
+    }
+    
+    .site-footer {
+        margin-top: 24px;
+    }
+    
+    .footer-flex {
+        padding: 8px;
+    }
+}
+
+/* Smartphones */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 6px 4px;
+    }
+    
+    .main-content {
+        width: 100%;
+        margin: 12px auto;
+        border-radius: 8px;
+    }
+    
+    .main-titles {
+        padding: 8px 6px 2px 6px;
+    }
+    
+    .main-title {
+        font-size: 1.3em;
+        margin-bottom: 2px;
+    }
+    
+    .main-subtitle {
+        font-size: 0.9em;
+        margin-bottom: 2px;
+    }
+    
+    .hero-flex {
+        padding: 0 6px 6px 6px !important;
+        gap: 4px !important;
+    }
+    
+    .hero-message {
+        margin-bottom: 1px;
+    }
+    
+    .hero-title {
+        font-size: 1em;
+        margin-bottom: 3px;
+    }
+    
+    .hero-desc {
+        font-size: 0.85em;
+        line-height: 1.3;
+        max-width: 100%;
+        margin-bottom: 1px;
+    }
+    
+    .hero-video {
+        margin-top: 0;
+    }
+    
+    .video-container {
+        margin: 0 auto;
+        border-radius: 6px;
+    }
+    
+    .video-container iframe {
+        border-radius: 6px;
+    }
+    
+    .about-flex {
+        padding: 8px 6px !important;
+        gap: 4px !important;
+    }
+    
+    .about-content {
+        gap: 2px !important;
+    }
+    
+    .about-text {
+        padding: 0 1px;
+        margin-bottom: 1px;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1em;
+        margin-bottom: 4px;
+    }
+    
+    .about-section p {
+        font-size: 0.85em;
+        line-height: 1.3;
+        margin-bottom: 4px;
+        max-width: 100%;
+    }
+    
+    .about-image {
+        margin-top: 1px;
+    }
+    
+    .about-image img {
+        border-radius: 6px;
+    }
+    
+    .highlight-box {
+        margin: 4px auto;
+        padding: 8px 10px;
+        font-size: 0.8em;
+        max-width: 100%;
+        border-radius: 6px;
+    }
+    
+    .button-container-1 {
+        width: 200px;
+        height: 40px;
+        margin-top: 4px;
+    }
+    
+    .button-container-1 button {
+        font-size: 12px;
+    }
+    
+    .mas, .mas-hover {
+        font-size: 13px;
+    }
+    
+    .site-logo {
+        max-width: 200px;
+    }
+    
+    .footer-message {
+        font-size: 0.8em;
+        padding: 4px 6px;
+        text-align: center;
+        line-height: 1.2;
+    }
+    
+    .site-footer {
+        margin-top: 16px;
+        padding: 6px 0;
+    }
+}
+
+/* Smartphones pequenos */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 8px 4px;
+    }
+    
+    .main-content {
+        width: 100%;
+        margin: 12px auto;
+        border-radius: 6px;
+    }
+    
+    .main-titles {
+        padding: 16px 8px 6px 8px;
+    }
+    
+    .main-title {
+        font-size: 1.3em;
+        margin-bottom: 4px;
+    }
+    
+    .main-subtitle {
+        font-size: 0.9em;
+    }
+    
+    .hero-flex {
+        padding: 0 8px 16px 8px !important;
+        gap: 6px !important;
+    }
+    
+    .hero-title {
+        font-size: 1em;
+        margin-bottom: 8px;
+    }
+    
+    .hero-desc {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+    
+    .video-container {
+        border-radius: 6px;
+    }
+    
+    .video-container iframe {
+        border-radius: 6px;
+    }
+    
+    .about-flex {
+        padding: 16px 8px !important;
+        gap: 6px !important;
+    }
+    
+    .about-text {
+        padding: 0 2px;
+    }
+    
+    .section-subtitle {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    
+    .about-section p {
+        font-size: 0.9em;
+        line-height: 1.4;
+        margin-bottom: 10px;
+    }
+    
+    .about-image img {
+        border-radius: 6px;
+    }
+    
+    .highlight-box {
+        margin: 12px auto;
+        padding: 12px 10px;
+        font-size: 0.85em;
+        max-width: 95%;
+        border-radius: 6px;
+        line-height: 1.3;
+    }
+    
+    .button-container-1 {
+        width: 220px;
+        height: 45px;
+        margin-top: 12px;
+        border-radius: 6px;
+    }
+    
+    .button-container-1 button {
+        font-size: 13px;
+        border-radius: 4px;
+    }
+    
+    .mas, .mas-hover {
+        font-size: 14px;
+    }
+    
+    .site-logo {
+        max-width: 180px;
+    }
+    
+    .footer-message {
+        font-size: 0.8em;
+        padding: 6px 8px;
+        line-height: 1.3;
+    }
+    
+    .site-footer {
+        margin-top: 24px;
+        padding: 8px 0;
+    }
+}
+
+/* Smartphones muito pequenos */
+@media screen and (max-width: 360px) {
+    .container {
+        padding: 6px 2px;
+    }
+    
+    .main-content {
+        margin: 8px auto;
+        border-radius: 4px;
+    }
+    
+    .main-titles {
+        padding: 12px 6px 4px 6px;
+    }
+    
+    .main-title {
+        font-size: 1.2em;
+    }
+    
+    .main-subtitle {
+        font-size: 0.85em;
+    }
+    
+    .hero-flex {
+        padding: 0 6px 12px 6px !important;
+        gap: 4px !important;
+    }
+    
+    .hero-title {
+        font-size: 0.95em;
+    }
+    
+    .hero-desc {
+        font-size: 0.85em;
+    }
+    
+    .about-flex {
+        padding: 12px 6px !important;
+        gap: 4px !important;
+    }
+    
+    .section-subtitle {
+        font-size: 1em;
+    }
+    
+    .about-section p {
+        font-size: 0.85em;
+    }
+    
+    .highlight-box {
+        margin: 10px auto;
+        padding: 10px 8px;
+        font-size: 0.8em;
+        max-width: 98%;
+    }
+    
+    .button-container-1 {
+        width: 200px;
+        height: 42px;
+        margin-top: 10px;
+    }
+    
+    .mas, .mas-hover {
+        font-size: 13px;
+    }
+    
+    .site-logo {
+        max-width: 160px;
+    }
+    
+    .footer-message {
+        font-size: 0.75em;
+        padding: 4px 6px;
+    }
+}
+
+/* CORREÇÃO ESPECÍFICA PARA MOBILE - Margins das seções */
+@media screen and (max-width: 768px) {
+    .hero-section {
+        margin: 0 0 2px 0 !important;
+    }
+    
+    .main-content {
+        margin: 8px auto !important;
+    }
+    
+    .main-titles {
+        padding: 8px 6px 2px 6px !important;
+    }
+    
+    .hero-flex {
+        margin: 0 !important;
+        padding: 0 6px 2px 6px !important;
+        gap: 2px !important;
+    }
+    
+    .about-flex {
+        margin: 0 !important;
+        padding: 6px 4px !important;
+        gap: 2px !important;
+    }
+    
+    .about-content {
+        margin: 0 !important;
+        gap: 1px !important;
+    }
+    
+    .about-text {
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .about-image {
+        margin: 0 !important;
+        margin-top: 0 !important;
+    }
+    
+    .highlight-box {
+        margin: 4px auto !important;
+    }
+}
+
+/* CORREÇÃO ULTRA ESPECÍFICA PARA MOBILE PEQUENO */
+@media screen and (max-width: 600px) {
+    .hero-section {
+        margin: 0 !important;
+    }
+    
+    .hero-flex {
+        margin: 0 !important;
+        padding: 0 4px 1px 4px !important;
+        gap: 1px !important;
+    }
+    
+    .hero-message {
+        margin: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .hero-video {
+        margin: 0 !important;
+        margin-top: 0 !important;
+    }
+    
+    .about-flex {
+        margin: 0 !important;
+        padding: 4px 2px !important;
+        gap: 1px !important;
+    }
+    
+    .about-content {
+        margin: 0 !important;
+        gap: 0px !important;
+    }
+    
+    .about-text, .about-image {
+        margin: 0 !important;
+    }
+}
+
+/* BLOCO FINAL ULTRA-COMPACTO MOBILE */
+@media screen and (max-width: 768px) {
+    .main-content { margin: 0 !important; padding: 0 4px !important; background: #ffffffa4; border-radius: 0 !important; }
+  .main-titles { margin: 0 !important; padding: 4px 4px 0 4px !important; }
+  .hero-section { margin: 0 !important; padding: 0 !important; }
+  .hero-flex { margin: 0 !important; padding: 0 !important; gap: 0 !important; }
+  .hero-message { margin: 0 !important; padding: 0 4px !important; }
+  .hero-title { margin: 0 0 2px 0 !important; }
+  .hero-desc { margin: 0 !important; }
+  .hero-video { margin: 0 !important; }
+  .video-container { margin: 0 !important; border-radius: 0 !important; }
+  .video-container iframe { border-radius: 0 !important; }
+  .about-section { margin: 0 !important; padding: 0 !important; background: #232323ad; }
+  .about-flex { margin: 0 !important; padding: 0 !important; gap: 0 !important; }
+  .about-content { margin: 0 !important; padding: 0 !important; gap: 0 !important; }
+    .about-text { margin: 0 !important; padding: 4px 8px 2px 8px !important; }
+  .about-section p { margin: 0 0 4px 0 !important; }
+  .about-image { margin: 0 !important; padding: 0 !important; }
+  .about-image img { margin: 0 !important; width: 100% !important; height: auto !important; border-radius: 4px !important; }
+  .highlight-box { margin: 4px 6px !important; }
+  .button-container-1 { margin: 6px auto 4px auto !important; }
+  footer.site-footer { margin-top: 4px !important; }
+}
+
+@media screen and (max-width: 480px) {
+  .about-section p { font-size: 0.85em !important; line-height: 1.3 !important; }
+  .hero-desc { font-size: 0.85em !important; line-height: 1.3 !important; }
+}
+
+/* (Removido override de fundo sólido; agora usamos pseudo-elemento) */
+
+/* Overrides finais mobile para colar vídeo e imagem ao texto e remover paddings do container interno */
+@media screen and (max-width: 768px) {
+  .container.hero-flex, .container.about-flex { padding:0 !important; }
+  .hero-flex { display:block !important; }
+  .hero-message, .hero-video { width:100% !important; }
+  .hero-video { margin:4px 0 0 0 !important; }
+  .video-container { padding-bottom:56.25%; margin:0 !important; }
+  .video-container iframe { top:0; }
+  .about-flex { display:block !important; }
+  .about-content { display:block !important; }
+  .about-text, .about-image { width:100% !important; }
+  .about-image { margin:4px 0 0 0 !important; }
+  .about-image img { width:100% !important; height:auto !important; }
+  .hero-title, .hero-desc, .section-subtitle, .about-section p { margin:0 0 6px 0 !important; }
+  .about-section p:last-of-type { margin-bottom:6px !important; }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-video { margin-top:2px !important; }
+  .about-image { margin-top:2px !important; }
+}
+
+/* Override final: sem espaço entre main-content e footer no mobile */
+@media screen and (max-width: 768px) {
+    .main-content { margin-bottom:0 !important; }
+    .site-footer { margin-top:0 !important; }
+    .about-section { margin-bottom:0 !important; padding-bottom:0 !important; }
+    .about-flex { padding-bottom:0 !important; }
+    .highlight-box { margin-bottom:4px !important; }
+    .button-container-1 { margin-bottom:0 !important; }
+    .main-content, .about-section { border-bottom-left-radius:0 !important; border-bottom-right-radius:0 !important; }
+    /* remove quaisquer margens finais internas */
+    .about-section p:last-of-type { margin-bottom:4px !important; }
+}

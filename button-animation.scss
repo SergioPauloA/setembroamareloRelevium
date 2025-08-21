@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700');
+
+@mixin button($bcolor,
+$url,
+$x1,
+$y1,
+$bor,
+$col) {
+    background: $bcolor;
+    -webkit-mask: url($url);
+    mask: url($url);
+    -webkit-mask-size: $x1 $y1;
+    mask-size: $x1 $y1;
+    border: $bor;
+    color: $col;
+}
+
+.button-container-1 {
+    position: relative;
+    width: 280px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    overflow: hidden;
+    border: 2px solid #FFD600;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    transition: 0.5s;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #232323;
+
+    button {
+        width: 101%;
+        height: 100%;
+        font-family: 'Lato', sans-serif;
+        font-weight: bold;
+        font-size: 16px;
+        letter-spacing: 1px;
+
+        @include button(#FFD600,
+        "https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png",
+        2300%,
+        100%,
+        none,
+        transparent);
+        
+        cursor: pointer;
+        border-radius: 6px;
+        -webkit-animation: ani2 0.7s steps(22) forwards;
+        animation: ani2 0.7s steps(22) forwards;
+
+        &:hover {
+            -webkit-animation: ani 0.7s steps(22) forwards;
+            animation: ani 0.7s steps(22) forwards;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 214, 0, 0.3);
+        }
+    }
+
+    &:hover {
+        border-color: #FFD600;
+        box-shadow: 0 0 15px rgba(255, 214, 0, 0.4);
+    }
+}
+
+.mas {
+    position: absolute;
+    color: #232323;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.mas-hover {
+    position: absolute;
+    color: #FFD600;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.4s;
+}
+
+.button-container-1:hover .mas {
+    opacity: 0;
+}
+
+.button-container-1:hover .mas-hover {
+    opacity: 1;
+}
+
+@-webkit-keyframes ani {
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+@keyframes ani {
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+@-webkit-keyframes ani2 {
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+}
+
+@keyframes ani2 {
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+}
