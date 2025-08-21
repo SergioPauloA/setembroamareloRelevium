@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SETEMBRO AMARELO - Relevium</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS compilado do button-animation.scss - Versão corrigida baseada no exemplo original */
+        @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,700");
+        
+        .button-container-1 {
+            position: relative;
+            width: 280px;
+            height: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 32px;
+            overflow: hidden;
+            border: 2px solid #FFD600;
+            font-family: "Lato", sans-serif;
+            font-weight: 300;
+            font-size: 18px;
+            transition: 0.5s;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #232323;
+        }
+        
+        .button-container-1 button {
+            width: 101%;
+            height: 100%;
+            font-family: "Lato", sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            letter-spacing: 1px;
+            background: #FFD600;
+            -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+            mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+            -webkit-mask-size: 2300% 100%;
+            mask-size: 2300% 100%;
+            border: none;
+            color: transparent;
+            cursor: pointer;
+            border-radius: 6px;
+            -webkit-animation: ani2 0.7s steps(22) forwards;
+            animation: ani2 0.7s steps(22) forwards;
+        }
+        
+        .button-container-1 button:hover {
+            -webkit-animation: ani 0.7s steps(22) forwards;
+            animation: ani 0.7s steps(22) forwards;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 214, 0, 0.3);
+        }
+        
+        .button-container-1:hover {
+            border-color: #FFD600;
+            box-shadow: 0 0 15px rgba(255, 214, 0, 0.4);
+        }
+        
+        .mas {
+            position: absolute;
+            color: #232323;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            font-family: "Lato", sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            transition: opacity 0.2s ease;
+        }
+        
+        .mas-hover {
+            position: absolute;
+            color: #FFD600;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            font-family: "Lato", sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease 0.4s;
+        }
+        
+        .button-container-1:hover .mas {
+            opacity: 0;
+        }
+        
+        .button-container-1:hover .mas-hover {
+            opacity: 1;
+        }
+        
+        @-webkit-keyframes ani {
+            from {
+                -webkit-mask-position: 0 0;
+                mask-position: 0 0;
+            }
+            to {
+                -webkit-mask-position: 100% 0;
+                mask-position: 100% 0;
+            }
+        }
+        
+        @keyframes ani {
+            from {
+                -webkit-mask-position: 0 0;
+                mask-position: 0 0;
+            }
+            to {
+                -webkit-mask-position: 100% 0;
+                mask-position: 100% 0;
+            }
+        }
+        
+        @-webkit-keyframes ani2 {
+            from {
+                -webkit-mask-position: 100% 0;
+                mask-position: 100% 0;
+            }
+            to {
+                -webkit-mask-position: 0 0;
+                mask-position: 0 0;
+            }
+        }
+        
+        @keyframes ani2 {
+            from {
+                -webkit-mask-position: 100% 0;
+                mask-position: 100% 0;
+            }
+            to {
+                -webkit-mask-position: 0 0;
+                mask-position: 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-center" style="padding: 12px 0 8px 0;">
+            <img src="novalogo-e1725386560432-768x289.png" alt="Logo Relevium Setembro Amarelo" class="site-logo no-bg">
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="main-titles">
+            <h1 class="main-title">Setembro Amarelo</h1>
+            <p class="main-subtitle">Cuidar é um ato de amor</p>
+        </div>
+        <section class="hero-section">
+            <div class="container hero-flex">
+                <div class="hero-message">
+                    <h2 class="hero-title">Acolhimento, cuidado e esperança</h2>
+                    <p class="hero-desc">A vida vale a pena ser vivida. Setembro Amarelo é um convite ao diálogo, à empatia e ao apoio mútuo. Juntos, podemos transformar vidas com pequenas atitudes de cuidado.</p>
+                </div>
+                <div class="hero-video">
+                    <div class="video-container">
+                        <iframe src="https://player.vimeo.com/video/1004083372?autoplay=1&playsinline=1&color=FFD600&autopause=0&loop=0&muted=0&title=0&portrait=0&byline=0" width="480" height="270" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="SETEMBRO AMARELO Relevium"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="container about-flex">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-subtitle">O Movimento</h2>
+                        <p>O Setembro Amarelo com a Relevium nasceu com o propósito de romper barreiras, combater preconceitos e incentivar que as pessoas tanto busquem quanto ofereçam apoio.</p>
+                        <p>Desde 2022, quando teve início, esse movimento tem ganhado força a cada ano, com um número crescente de pessoas entendendo que discutir o suicídio é essencial, mas deve ser feito com responsabilidade.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="6c6c1d65-8528-48c9-9e44-36489f293779-e1725388845526-1024x545.jpg" alt="Equipe Relevium Setembro Amarelo" />
+                    </div>
+                </div>
+                <div class="highlight-box">
+                    <strong>Você não está só. Estamos juntos nessa caminhada!</strong>
+                </div>
+                <div class="button-container-1">
+                    <span class="mas">Quero participar!</span>
+                    <span class="mas-hover">Junte-se a nós!</span>
+                    <button id="cta-btn" type="button" onclick="window.location.href='#'">Quero participar!</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-flex">
+            <span class="footer-message">Relevium &copy; Setembro Amarelo - Cuidando de quem cuida</span>
+        </div>
+    </footer>
+</body>
+</html>
