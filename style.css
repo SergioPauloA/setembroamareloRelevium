@@ -1013,7 +1013,7 @@ body {
   .hero-video { margin: 0 !important; }
   .video-container { margin: 0 !important; border-radius: 0 !important; }
   .video-container iframe { border-radius: 0 !important; }
-  .about-section { margin: 0 !important; padding: 0 !important; background: #232323ad; }
+    .about-section { margin: 0 !important; padding: 0 !important; background: transparent; }
   .about-flex { margin: 0 !important; padding: 0 !important; gap: 0 !important; }
   .about-content { margin: 0 !important; padding: 0 !important; gap: 0 !important; }
     .about-text { margin: 0 !important; padding: 4px 8px 2px 8px !important; }
@@ -1023,6 +1023,11 @@ body {
   .highlight-box { margin: 4px 6px !important; }
   .button-container-1 { margin: 6px auto 4px auto !important; }
   footer.site-footer { margin-top: 4px !important; }
+}
+
+/* Mobile: aumentar transparência do overlay do bloco preto */
+@media screen and (max-width: 768px) {
+    .about-section::before { background: rgba(35,35,35,0.58) !important; }
 }
 
 @media screen and (max-width: 480px) {
